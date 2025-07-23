@@ -17,7 +17,7 @@ export default function SearchBox() {
         <input
           type="text"
           placeholder="search for flights, hotels and more"
-          className="border text-[14px] rounded-full pl-[42px] py-[16px] w-[400px] shadow-lg"
+          className="border text-[14px] rounded-full pl-[42px] py-[16px] w-[400px] shadow-lg max-sm:w-[350px]"
           ref={inputRef}
         />
       </div>

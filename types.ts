@@ -3,3 +3,7 @@ export type NavLinks = {
   linkTo: string;
   label: string;
 }[];
+
+export type HeaderProps = {
+  navMenuColor?: string;
+};

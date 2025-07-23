@@ -1,7 +1,10 @@
+import Header from "@/components/Header";
+
 export default function Flights() {
   return (
-    <div>
-      <p>flights page</p>
+    <div className="bg-[var(--flight-body-background)] text-white">
+      <Header />
+      hello
     </div>
   );
 }

@@ -11,8 +11,6 @@ import { Plane } from "lucide-react";
 import { Hotel } from "lucide-react";
 import { House } from "lucide-react";
 
-import { Outlet } from "react-router";
-
 const navLinks: NavLinks = [
   {
     icon: <Earth />,
@@ -39,21 +37,25 @@ const navLinks: NavLinks = [
 export default function Travel() {
   return (
     <>
-      <Header />
+      <Header navMenuColor="#fff" />
 
       <div className="max-w-7xl mx-auto px-8">
-        <img src="/travel/travel-hero.svg" alt="Travel hero image" />
+        <img
+          src="/travel/travel-hero.svg"
+          alt="Travel hero image"
+          className="w-full object-contain h-auto max-sm:h-38 max-sm:object-cover"
+        />
 
         <div className="flex flex-col items-center justify-center gap-5">
           <h1 className="text-5xl text-[var(--gray-color)] text-center font-medium">
             Travel
           </h1>
           <SearchBox />
-          <ul className="flex gap-5">
+          <ul className="flex sm:gap-3 lg:gap-5">
             {navLinks.map((el, index) => (
               <li
                 key={index}
-                className="text-gray-600 text-[14px] hover:bg-gray-200 p-3 space-y-3 rounded-md font-medium cursor-pointer"
+                className="text-gray-600 text-[14px] hover:bg-gray-200 p-3 space-y-3 rounded-md font-medium cursor-pointer whitespace-nowrap"
               >
                 <span className="flex items-center justify-center">
                   {el.icon}
@@ -63,9 +65,6 @@ export default function Travel() {
             ))}
           </ul>
         </div>
-
-        {/* Outlet to render nested nested route content */}
-        <Outlet />
       </div>
     </>
   );

@@ -1,5 +1,5 @@
 // type definition
-import type { NavLinks } from "../../types";
+import type { NavLinks, HeaderProps } from "../../types";
 
 // reusable button component
 import { Button } from "@/components/ui/button";
@@ -40,7 +40,7 @@ const navLinks: NavLinks = [
   },
 ];
 
-export default function Header() {
+export default function Header({ navMenuColor }: HeaderProps) {
   const [showNav, setShowNav] = useState<boolean>(false);
 
   const showNavMobile = () => {
@@ -48,8 +48,10 @@ export default function Header() {
   };
 
   return (
-    <header className="sticky top-0 left-0 shadow-2xs w-full z-50 bg-white">
-      <nav className="flex items-center justify-between h-16 px-8 max-w-7xl mx-auto">
+    <header className="sticky top-0 left-0 shadow-2xs w-full z-50">
+      <nav
+        className={`flex items-center justify-between h-16 px-8 max-w-7xl mx-auto max-sm:h-auto bg-${navMenuColor}`}
+      >
         {/* Menu Icon */}
         <span
           onClick={showNavMobile}
@@ -75,7 +77,7 @@ export default function Header() {
 
       {/* Mobile Sidebar Nav */}
       <div
-        className={`fixed top-0 left-0 h-full w-[80%] bg-white shadow-lg transform transition-transform duration-300 z-50 sm:hidden ${
+        className={`fixed top-0 left-0 h-full w-[80%] bg-${navMenuColor} shadow-lg transform transition-transform duration-300 z-50 sm:hidden ${
           showNav ? "translate-x-0" : "-translate-x-full"
         }`}
       >
