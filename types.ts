@@ -6,4 +6,5 @@ export type NavLinks = {
 
 export type HeaderProps = {
   navMenuColor?: string;
+  isDark?: boolean;
 };

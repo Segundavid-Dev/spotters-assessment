@@ -40,7 +40,7 @@ const navLinks: NavLinks = [
   },
 ];
 
-export default function Header({ navMenuColor }: HeaderProps) {
+export default function Header({ navMenuColor, isDark }: HeaderProps) {
   const [showNav, setShowNav] = useState<boolean>(false);
 
   const showNavMobile = () => {
@@ -65,7 +65,7 @@ export default function Header({ navMenuColor }: HeaderProps) {
           {navLinks.map((link, index) => (
             <NavLink to={link.linkTo} key={index}>
               <li key={index}>
-                <Button variant={"white"} className="p-5">
+                <Button variant={isDark ? "dark" : "white"} className="p-5">
                   <span className="text-[var(--icon-color)]">{link.icon}</span>
                   <p>{link.label}</p>
                 </Button>
@@ -95,8 +95,8 @@ export default function Header({ navMenuColor }: HeaderProps) {
             <NavLink to={link.linkTo} key={index} onClick={showNavMobile}>
               <li key={index}>
                 <Button
-                  variant={"ghost"}
-                  className="w-full justify-start gap-3"
+                  variant={`ghost`}
+                  className={`w-full justify-start gap-3`}
                 >
                   <span className="text-[var(--icon-color)]">{link.icon}</span>
                   <p>{link.label}</p>
