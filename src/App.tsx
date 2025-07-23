@@ -1,7 +1,9 @@
+import AppRoutes from "./routes/AppRoutes";
+
 function App() {
   return (
     <div>
-      <p>Goggle Flights</p>
+      <AppRoutes />
     </div>
   );
 }
