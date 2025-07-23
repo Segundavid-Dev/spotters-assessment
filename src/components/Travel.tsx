@@ -3,7 +3,7 @@ import Header from "./Header";
 import SearchBox from "./ui/search";
 
 // type definition
-import type { NavLink } from "../../types";
+import type { NavLinks } from "../../types";
 
 // lucide icons
 import { Earth } from "lucide-react";
@@ -11,7 +11,9 @@ import { Plane } from "lucide-react";
 import { Hotel } from "lucide-react";
 import { House } from "lucide-react";
 
-const navLinks: NavLink = [
+import { Outlet } from "react-router";
+
+const navLinks: NavLinks = [
   {
     icon: <Earth />,
     linkTo: "/",
@@ -61,6 +63,9 @@ export default function Travel() {
             ))}
           </ul>
         </div>
+
+        {/* Outlet to render nested nested route content */}
+        <Outlet />
       </div>
     </>
   );
