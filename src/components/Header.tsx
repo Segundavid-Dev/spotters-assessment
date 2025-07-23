@@ -1,0 +1,58 @@
+// import type { NavLink } from "@/types";
+
+import type { NavLink } from "../../types";
+
+import { Button } from "@/components/ui/button";
+
+import { Backpack } from "lucide-react";
+import { Earth } from "lucide-react";
+import { Plane } from "lucide-react";
+import { Hotel } from "lucide-react";
+import { House } from "lucide-react";
+
+const navLinks: NavLink = [
+  {
+    icon: <Backpack />,
+    linkTo: "",
+    label: "Travel",
+  },
+  {
+    icon: <Earth />,
+    linkTo: "",
+    label: "Explore",
+  },
+  {
+    icon: <Plane />,
+    linkTo: "",
+    label: "Flights",
+  },
+  {
+    icon: <Hotel />,
+    linkTo: "",
+    label: "Hotels",
+  },
+  {
+    icon: <House />,
+    linkTo: "",
+    label: "Vacation rentals",
+  },
+];
+
+export default function Header() {
+  return (
+    <header className="sticky top-0 left-0 shadow-2xs w-full z-50">
+      <nav className="bg-white h-18 flex items-center max-w-7xl mx-auto px-8">
+        <ul className="flex gap-4">
+          {navLinks.map((link, index) => (
+            <li key={index}>
+              <Button variant={"white"} className="p-5">
+                <span className="text-[var(--icon-color)]">{link.icon}</span>
+                <p>{link.label}</p>
+              </Button>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </header>
+  );
+}
