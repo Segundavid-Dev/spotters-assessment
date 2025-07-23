@@ -22,12 +22,14 @@ const buttonVariants = cva(
         link: "text-primary underline-offset-4 hover:underline",
         white:
           "bg-white rounded-full border border-gray-300 cursor-pointer hover:text-[rgb(26,115,232)]",
+        buttonVariant: "py-10 block text-center",
       },
       size: {
         default: "h-9 px-4 py-2 has-[>svg]:px-3",
         sm: "h-8 rounded-md gap-1.5 px-3 has-[>svg]:px-2.5",
         lg: "h-10 rounded-md px-6 has-[>svg]:px-4",
         icon: "size-9",
+        custom: "py-3 rounded-md gap-1.5 px-5",
       },
     },
     defaultVariants: {

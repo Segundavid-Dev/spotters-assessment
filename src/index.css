@@ -80,6 +80,7 @@ body {
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
   --icon-color: oklab(57.371% -0.04089 -0.19034);
+  --gray-color: oklch(24.794% 0.00588 271.183);
 }
 
 .dark {

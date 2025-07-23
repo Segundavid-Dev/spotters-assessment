@@ -1,9 +1,10 @@
-// import type { NavLink } from "@/types";
-
+// type definition
 import type { NavLink } from "../../types";
 
+// reusable button component
 import { Button } from "@/components/ui/button";
 
+// lucide icons
 import { Backpack } from "lucide-react";
 import { Earth } from "lucide-react";
 import { Plane } from "lucide-react";
