@@ -8,3 +8,12 @@ export type HeaderProps = {
   navMenuColor?: string;
   isDark?: boolean;
 };
+
+export type Flight = {
+  flight_number: string;
+  airline: string;
+  price: number;
+  duration: string;
+  departure_time: string;
+  arrival_time: string;
+};

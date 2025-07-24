@@ -13,4 +13,3 @@ export default function Flights() {
     </div>
   );
 }
-// I am asked to implement this api https://rapidapi.com/apiheya/api/sky-scrapper to it to create something like goggle flights, where i can fetch information from the api based of the input form
