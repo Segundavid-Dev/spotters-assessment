@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router";
-import Travel from "@/components/Travel";
+import Travel from "@/pages/Travel";
 import Explore from "@/pages/Explore";
 import Flights from "@/pages/Flights";
 import Hotels from "@/pages/Hotels";

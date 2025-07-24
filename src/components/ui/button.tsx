@@ -21,8 +21,8 @@ const buttonVariants = cva(
           "hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50",
         link: "text-primary underline-offset-4 hover:underline",
         white:
-          "bg-white rounded-full border border-gray-300 cursor-pointer hover:text-[rgb(26,115,232)]",
-        dark: "bg-[var(--flight-body-background)] rounded-full border text-white border-gray-300 cursor-pointer hover:text-[rgb(26,115,232)]",
+          "bg-white rounded-full border border-gray-300 cursor-pointer hover:text-[#2596be]",
+        dark: "bg-[var(--flight-body-background)] rounded-full border text-white border-gray-300 cursor-pointer hover:text-[#2596be]",
         buttonVariant: "py-10 block text-center",
       },
       size: {

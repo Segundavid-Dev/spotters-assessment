@@ -1,6 +1,6 @@
 // reusable components
-import Header from "./Header";
-import SearchBox from "./ui/search";
+import Header from "../components/Header";
+import SearchBox from "../components/ui/search";
 
 // type definition
 import type { NavLinks } from "../../types";
