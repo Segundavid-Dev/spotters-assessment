@@ -12,7 +12,7 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 import { Button } from "@/components/ui/button";
-import { Calendar as CalendarIcon, MapPin } from "lucide-react";
+import { CalendarIcon, MapPin } from "lucide-react";
 import { useState } from "react";
 import { format } from "date-fns";
 import type { Flight } from "types";
@@ -28,12 +28,12 @@ const skyIdMap: { [key: string]: string } = {
 };
 
 const entityIdMap: { [key: string]: string } = {
-  LOS: "95565058", // Replace with actual entityId for Lagos
-  ABV: "95565059", // Replace with actual entityId for Abuja
-  PHC: "95565060", // Replace with actual entityId for Port Harcourt
-  LHR: "27544008", // London (from Postman example)
-  CDG: "27539733", // Replace with actual entityId for Paris
-  JFK: "27537542", // New York (from Postman example)
+  LOS: "95565058",
+  ABV: "95565059",
+  PHC: "95565060",
+  LHR: "27544008",
+  CDG: "27539733",
+  JFK: "27537542",
 };
 
 export default function FlightSearchBar() {
@@ -41,7 +41,6 @@ export default function FlightSearchBar() {
   const [destination, setDestination] = useState<string>("");
   const [departureDate, setDepartureDate] = useState<Date | undefined>();
   const [returnDate, setReturnDate] = useState<Date | undefined>();
-  const [sortBy, setSortBy] = useState<string>("best");
   const [flights, setFlights] = useState<Flight[]>([]);
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
@@ -94,7 +93,6 @@ export default function FlightSearchBar() {
         market: "en-US",
         countryCode: "US",
         adults: "1",
-        sortBy,
         limit: "100",
         cabinClass: "economy",
         ...(returnDate && { returnDate: format(returnDate, "yyyy-MM-dd") }),
@@ -228,32 +226,6 @@ export default function FlightSearchBar() {
             />
           </PopoverContent>
         </Popover>
-
-        {/* Sort By */}
-        <div className="flex items-center gap-2 bg-[#3c3c3e] px-4 py-2 rounded-md w-full sm:w-auto flex-1 h-10">
-          <Select onValueChange={setSortBy} defaultValue="best">
-            <SelectTrigger className="bg-transparent border-none focus:ring-0 text-white h-full">
-              <SelectValue placeholder="Sort By" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="best">Best</SelectItem>
-              <SelectItem value="price_high">Cheapest</SelectItem>
-              <SelectItem value="fastest">Fastest</SelectItem>
-              <SelectItem value="outbound_take_off_time">
-                Outbound Take Off Time
-              </SelectItem>
-              <SelectItem value="outbound_landing_time">
-                Outbound Landing Time
-              </SelectItem>
-              <SelectItem value="return_take_off_time">
-                Return Take Off Time
-              </SelectItem>
-              <SelectItem value="return_landing_time">
-                Return Landing Time
-              </SelectItem>
-            </SelectContent>
-          </Select>
-        </div>
       </div>
 
       <Button

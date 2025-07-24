@@ -17,3 +17,11 @@ export type Flight = {
   departure_time: string;
   arrival_time: string;
 };
+
+export type FlightData = {
+  destination: string;
+  imageUrl: string;
+  price: string;
+  dateRange: string;
+  flightInfo: string;
+};
