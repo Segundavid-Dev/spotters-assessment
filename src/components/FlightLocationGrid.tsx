@@ -8,36 +8,13 @@ export default function FlightLocationGrid() {
 
   useEffect(() => {
     async function fetchData() {
-      const url =
-        "https://sky-scrapper.p.rapidapi.com/api/v1/hotels/getHotelDetails?hotelId=106005202&entityId=27537542&currency=USD&market=en-US&countryCode=US";
-      const options = {
-        method: "GET",
-        headers: {
-          "x-rapidapi-key":
-            "34a04bdc75msh63aafe2635ce593p1d6111jsn1acc0da0a0e2",
-          "x-rapidapi-host": "sky-scrapper.p.rapidapi.com",
-        },
-      };
+      const url = "/data/location.json";
 
       try {
-        const res = await fetch(url, options);
+        const res = await fetch(url);
         const data = await res.json();
-        const imageUrl =
-          data?.data?.propertyGallery?.images?.[0]?.image?.url ||
-          "/fallback-image.jpg";
-
-        // Mock 6 destinations using this same data
-        const fakeDestinations: FlightData[] = Array.from({ length: 6 }).map(
-          (_, i) => ({
-            destination: `City ${i + 1}`,
-            imageUrl: imageUrl,
-            price: `NGN ${(1_500_000 + i * 100_000).toLocaleString()}`,
-            dateRange: "Aug 14 — Aug 21",
-            flightInfo: "1 stop · 14 hr 5 min · Ethiopian",
-          })
-        );
-
-        setLocations(fakeDestinations);
+        console.log(data);
+        setLocations(data);
       } catch (error) {
         console.error("Error fetching hotel data", error);
       } finally {
@@ -51,15 +28,15 @@ export default function FlightLocationGrid() {
   if (loading) return <p className="text-center text-white">Loading...</p>;
 
   return (
-    <section className="px-4 py-6">
-      <h2 className="text-2xl font-semibold mb-4 text-white">
+    <section className="px-4 py-20">
+      <h2 className="text-2xl font-semibold mb-4 text-white max-w-3xl mx-auto">
         Popular trips from Lagos
       </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
         {locations.map((loc, index) => (
           <div
             key={index}
-            className="flex items-start gap-4 bg-[#202124] p-4 rounded-lg shadow-md hover:shadow-xl transition-shadow"
+            className="flex items-start gap-4 p-4 rounded-lg shadow-md transition-shadow"
           >
             <img
               src={loc.imageUrl}
