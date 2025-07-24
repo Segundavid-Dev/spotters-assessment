@@ -1,16 +1,8 @@
-// type definition
-import type { NavLinks, HeaderProps } from "../../types";
-
-// reusable button component
-import { Button } from "@/components/ui/button";
-
-// lucide icons
-import { Backpack, Earth, Plane, Hotel, House, Menu, X } from "lucide-react";
-
-// react router navlink
 import { NavLink } from "react-router";
-
 import { useState } from "react";
+import type { NavLinks, HeaderProps } from "../../types";
+import { Button } from "@/components/ui/button";
+import { Backpack, Earth, Plane, Hotel, House, Menu, X } from "lucide-react";
 
 const navLinks: NavLinks = [
   {
@@ -48,7 +40,7 @@ export default function Header({ navMenuColor, isDark }: HeaderProps) {
   };
 
   return (
-    <header className="sticky top-0 left-0 shadow-2xs w-full z-50 bordr-b">
+    <header className="sticky top-0 left-0 shadow-2xs w-full z-50 border-b">
       <nav
         style={{ background: navMenuColor }}
         className={`flex items-center justify-between h-16 px-8 max-w-7xl mx-auto max-sm:h-auto`}

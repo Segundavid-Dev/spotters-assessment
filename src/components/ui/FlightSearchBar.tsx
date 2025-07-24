@@ -19,12 +19,12 @@ import type { Flight } from "types";
 
 // Mapping of IATA codes to city-level SkyId and entityId
 const skyIdMap: { [key: string]: string } = {
-  LOS: "LAGO", // Lagos
-  ABV: "ABJA", // Abuja
-  PHC: "PHAR", // Port Harcourt
-  LHR: "LOND", // London
-  CDG: "PARI", // Paris
-  JFK: "NYCA", // New York
+  LOS: "LAGO",
+  ABV: "ABJA",
+  PHC: "PHAR",
+  LHR: "LOND",
+  CDG: "PARI",
+  JFK: "NYCA",
 };
 
 const entityIdMap: { [key: string]: string } = {
@@ -45,6 +45,7 @@ export default function FlightSearchBar() {
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
 
+  // search function
   const handleSearch = async () => {
     if (!origin || !destination || !departureDate) {
       setError(
