@@ -1,16 +1,44 @@
 [
   {
     "destination": "Athens",
-    "imageUrl": "/travel/Athnes.jpg",
+    "imageUrl": "/travel/Athens.jpg",
     "price": "$1,578",
     "dateRange": "Aug 14 — Aug 21",
     "flightInfo": "1 stop 14hr 5 min . Ethiopian"
   },
   {
-    "destination": "Athens",
-    "imageUrl": "/travel/Athnes.jpg",
+    "destination": "Rome",
+    "imageUrl": "/travel/Rome.jpg",
     "price": "$1,578",
-    "dateRange": "Aug 14 — Aug 21",
+    "dateRange": "Aug 3 — Aug 9",
+    "flightInfo": "1 stop 21hr 30 min . Qatar Airways"
+  },
+  {
+    "destination": "Malta",
+    "imageUrl": "/travel/Malta.jpg",
+    "price": "$1,082",
+    "dateRange": "Aug 4 — Aug 11",
     "flightInfo": "1 stop 14hr 5 min . Ethiopian"
+  },
+  {
+    "destination": "Lisbon",
+    "imageUrl": "/travel/Lisbon.jpg",
+    "price": "$1,361",
+    "dateRange": "Sep 11 - sep 20",
+    "flightInfo": "1 stop 14hr 15 min . Royal Air Maroc"
+  },
+  {
+    "destination": "Paris",
+    "imageUrl": "/travel/Paris.jpg",
+    "price": "$1,382",
+    "dateRange": "Oct 26 - Nov 2",
+    "flightInfo": "1 stop 8hr 15 min . Royal Air Maroc"
+  },
+  {
+    "destination": "London",
+    "imageUrl": "/travel/London.jpg",
+    "price": "$1, 063",
+    "dateRange": "Nov 10 -18",
+    "flightInfo": "1 stop 9hr 40min . KLM"
   }
 ]

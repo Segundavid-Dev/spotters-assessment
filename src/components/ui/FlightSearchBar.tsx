@@ -148,7 +148,7 @@ export default function FlightSearchBar() {
   };
 
   return (
-    <div className="relative w-full max-w-3xl mx-auto">
+    <div className="relative w-full max-w-4xl mx-auto">
       {/* Flight Search Form */}
       <div className="bg-[#2d2d2d] p-4 rounded-xl flex flex-wrap gap-2 justify-between items-center text-white">
         {/* From */}

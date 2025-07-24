@@ -29,14 +29,14 @@ export default function FlightLocationGrid() {
 
   return (
     <section className="px-4 py-20">
-      <h2 className="text-2xl font-semibold mb-4 text-white max-w-3xl mx-auto">
+      <h2 className="text-2xl font-semibold mb-4 text-white max-w-4xl mx-auto">
         Popular trips from Lagos
       </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-20 max-w-4xl mx-auto">
         {locations.map((loc, index) => (
           <div
             key={index}
-            className="flex items-start gap-4 p-4 rounded-lg shadow-md transition-shadow"
+            className="flex items-center gap-4 p-4 rounded-lg shadow-md transition-shadow"
           >
             <img
               src={loc.imageUrl}
